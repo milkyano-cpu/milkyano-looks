@@ -1,0 +1,13 @@
+{
+  "name": "Demo Lamp Co",
+  "font_display": "Inter Bold",
+  "font_text": "Inter",
+  "accent": "#3A8DFF",
+  "brand_mark": "demo/mark.png",
+  "outro_files": {"24": "demo/outro_24.mov", "30": "demo/outro_30.mov", "59.94": "demo/outro_5994.mov"},
+  "product_names": ["LUMA 1", "LUMA 2"],
+  "spec_source": "demo product spec page",
+  "shared_lines": ["Plug and play.", "2-year warranty"],
+  "comparison_labels": {"before": "Stock bulb", "after": "LUMA 2"},
+  "glow_colour": "#EBF2FF"
+}

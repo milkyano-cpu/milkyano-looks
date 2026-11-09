@@ -1,0 +1,85 @@
+{
+  "name": "Glow Callout",
+  "slug": "glow-callout",
+  "output": {"type": "talking-head short / ranked list", "aspect": "9:16", "w": 1080, "h": 1920, "fps": "follow source (measured at 59.94)", "length_s": [30, 105], "deliver": ["mp4", "premiere xml", "prores 4444 alpha per card", "sfx stem", "music bed", "srt", "720p preview"]},
+  "type": {
+    "display": {"font": "Nunito Black", "authored_px": 48, "tracking": 0, "leading": 1.2, "note": "one rounded sans for every card and caption, one weight"},
+    "ladder_px": {"caption": 48, "support_line2": [56, 68], "support_line1": [104, 114], "punch": 154, "hero": [176, 222], "lockup_exception": [330, 200]},
+    "rules": {"max_levels_per_frame": 3, "min_step": 1.5, "stack_gap_em": 0.08, "lead_in_to_hero_ratio": [1.6, 2.2], "max_settled_width_frac": 0.8},
+    "comment_mockup": {"font": "Inter", "px": 39, "reply_px": 24, "reply_colour": "#7D7D7D"}
+  },
+  "colour_roles": {
+    "text_base": "#FFFFFF",
+    "highlight_positive": "#4FD1FF",
+    "highlight_negative": "#FF3B3B",
+    "highlight_price": "#39E75F",
+    "gradient_hero": ["#6EE7FF", "#3B6CFF"],
+    "gradient_4colour": {"tl": "#FFE600", "tr": "#2BFF6A", "br": "#2F7BFF", "bl": "#FF2BD6"},
+    "gradient_metal": ["#FFF4C8", "#FFDD6E", "#FFC03A", "#F28A1E"],
+    "saber": "#FF1E1E",
+    "scrim": "#000000",
+    "rules": ["one highlight run per card, whole word or whole line", "one positive hex family per video", "price colour for prices and check icons only", "max 3 coloured words per video outside the hook in a verdict series", "negative card followed by its solution beat in positive"]
+  },
+  "motion": {
+    "fps_ref": 59.94,
+    "pop": {"keys_f_scale": [[0, 0.14], [3, 1.0], [6, 1.16], [21, 1.0]], "text_opacity_in_f": 6, "line_stagger_f": 3, "motion_blur": {"shutter_deg": 180, "phase_deg": -90, "samples": 10}},
+    "glow": {"radius_layer_px": 416, "exposure": 0.268, "iterations": 8, "radii_easing": 90, "ease_in_f": 15, "ease_in_f_fallback": 27, "ease": "smoothstep", "additive": true,
+             "exposure_variants": {"white_two_line": [0.095, 0.104], "white_line2": 0.10, "over_bright_footage": 0.119, "logo": 0.12},
+             "python_model": {"sigmas_px": [1.2, 2.5, 5, 10, 20, 40, 80, 130], "weights": [0.3076, 0.1127, 0.0111, 0.4115, 0.0506, 0.5211, 0.3236, 0.0], "px_ref": 110.3, "colour_lift": 0.4},
+             "falloff_linear": {"1": 0.42, "3": 0.29, "6": 0.23, "12": 0.16, "24": 0.11, "36": 0.077, "60": 0.038, "100": 0.0125, "160": 0.0025}},
+    "drop_shadow": {"opacity": 0.8, "distance_px": 7, "softness": 20},
+    "scrim": {"bottom": {"clear_y": 0.477, "black_y": 1.086, "edge_black": 0.85}, "top": {"black_y": -0.11, "clear_y": 0.503}, "in_f": 21, "ease": "cubic out",
+              "variants": {"top_dense": "0.8 black, clear edge 0.52, 0.32 soft ramp", "mid": "clear edge 0.30", "left": "x 0 -> 0.62, 0.85 black, window y 0.5 +- 0.16"}},
+    "card_out": {"fade_f": 15, "hero_word_fade_f": 9, "scrim_fades_with_card": true},
+    "zoom": {"punch": [1.0, 1.2, "34-38 f, ends on the cut into a graphic"], "comedy_push": [1.0, 1.15, "quadratic out, about the face"], "section_push": [1.0, 1.15], "jump_steps": [1.0, 1.12, 1.27], "broll_drift": [1.0, 1.1, "linear"], "max": 1.2},
+    "hook_fly_in": {"scale_at_0_25s": [2.4, 2.7], "scale_at_0_5s": 1.0, "hold_s": 0.9, "exit_smear_s": 0.125, "flip_f": 8, "flip_deg": {"x": -32, "y": 24}},
+    "lockup_word": {"start_width_frac": [0.73, 0.86], "hold_s": 0.4, "shrink_s": [0.5, 0.75], "end_width_frac": 0.44},
+    "metal_pop": {"scale": [0.2, 1.12, 1.0], "y_px": 90, "rot_deg": -3, "in_s": 0.24, "ease_in": "expo.out", "settle_s": 0.18, "sheen": {"angle_deg": 105, "sweep_pct": [120, -20], "s": 0.7, "at_s": 0.2}},
+    "saber_wipe": {"frames": 42, "core_x_frac": [-0.1, 1.1], "reveal_offset_px": 230, "feather_px": {"lead": 30, "trail": 160, "subject": 25}, "band_margin_px": 120, "intensity": 45, "spread": 0.18, "bias": 0.26, "core_size": 1.6, "shadow_fade": [0.29, 1.0, "41 f"]},
+    "transitions": {"footage": "hard cut", "chapter_flash_f": [1, 3], "shutter_flash_f": 8, "graphic_dissolve_f": [20, 31], "end_dip_f": 30}
+  },
+  "captions": {
+    "px": 48, "colour": "#FFFFFF", "case": "lowercase except I, names, brands", "words": [1, 4], "chars_target": 20, "chars_max": 25, "dur_s": [0.5, 0.9],
+    "x": 540, "baseline_y": 1300, "rise": {"px": 40, "f": 10, "ease": "cubic out", "opacity_f": 7},
+    "shadow": [{"opacity": 0.59, "blur": 9, "offset": [4, 7]}, {"opacity": 0.84, "blur": 3.5, "offset": [3, 4]}],
+    "gap_close_s": 0.45, "never_cross_cut": true, "hide_under_cards_band_y": [1190, 1402], "dedupe_with_cards": true,
+    "punctuation": "keep ?, no full stops or commas", "last_fade_f": [24, 57]
+  },
+  "layout_px": {
+    "safe_box": [55, 238, 1022, 1636], "below_y955_max_x": 910,
+    "hook_y": [269, 672], "rank_header_y": [403, 499], "price_top_y": [384, 557], "spec_line1_y": [1267, 1325], "spec_line2_y": [1363, 1402],
+    "callout_band_y": [1190, 1402], "logo_y": [192, 576], "check_y": [1171, 1344], "cross_y": [1114, 1190], "quote_y": [1286, 1402]
+  },
+  "sound": {
+    "pop_db": -14, "price": "cash register within 8 f, -14 dB", "negative": "error tone, -14 dB", "next_whoosh": {"db": -20, "lead_s": 0.234}, "saber": "saber whoosh on wipe in-point", "max_simultaneous": 2,
+    "music": {"gain_db": [-25, -20], "fade_in_s": 0.2, "outro_db": -9, "outro_rise": "from 15 f before the end cut to 0.3 s after", "outro_fade_s": 1.4, "gag_mute_fades_s": [0.06, 0.12], "ducking": false},
+    "voice_chain": "HPF 85 Hz, denoise, -1.5 dB @220 Hz, +2.5 dB @3.2 kHz, +1 dB shelf @9 kHz, comp 3.2:1, loudnorm -15.5 LUFS TP -1.5 LRA 6, limiter",
+    "crossfade_f": [6, 16], "crossfade": "equal power", "master_lufs": -15.5
+  },
+  "pacing": {
+    "hook_window_s": [0, 3.4], "open": "claim or pain point at frame 0",
+    "talking_cuts_per_min": [13, 26], "talking_shot_mean_s": [2.1, 2.2], "talking_shot_median_s": [1.7, 1.9], "max_mean_shot_s": 3.1,
+    "montage_cuts_per_min": [42, 47], "graphic_in_after_word_s": [0.0, 0.3], "price_after_word_s": 0.06,
+    "holds_s": {"callout": [1.4, 2.3], "spec_line": [0.9, 3.0], "ranked_header": [2.4, 5.0], "rank_card": [3.0, 4.5], "min_read": "0.4 + 0.25 per word, hero 0.8"}
+  },
+  "bans": ["bloom that flashes on", "sizes outside the ladder", "two heroes on one frame", "tinted scrim", "strokes on callouts", "RGB-split glitch", "caption and card with the same words", "card over the face", "scale-height caption squish", "footage dissolves", "squished footage", "introductions at the start"],
+  "skin_slots": {
+    "font_display": "display font name for every card and caption",
+    "font_display_file": "path to the display font file (glow_fx.py)",
+    "highlight_positive": "named thing / payoff colour",
+    "highlight_negative": "problem / loser colour",
+    "highlight_price": "price and check-icon colour",
+    "gradient_hero": "two-stop gradient for punch-phrase hero words",
+    "gradient_4colour": "four corner colours for the list-hook lockup word",
+    "gradient_metal": "optional metal gradient stops for a premium highlight word",
+    "saber_colour": "light-line wipe colour",
+    "glow_exposure": "default bloom exposure",
+    "safe_box": "platform safe box [x0, y0, x1, y1]",
+    "face_model": "path to a YuNet face model for head-aware hook placement",
+    "outro_file": "end card clip path and length in frames",
+    "logo_files": "logo PNGs shown white with glow on a spoken brand name",
+    "music_bed": "default track and gain under speech",
+    "sfx_files": "pop, cash register, error, whoosh, saber whoosh, shutter",
+    "spelling": "brand and product spellings to enforce in captions"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Demo Advisor",
+  "font_display": "Montserrat ExtraBold",
+  "text": "#FFFFFF",
+  "deep": "#1C2433",
+  "accent": "#CDB38B",
+  "mistake": "#B3261E",
+  "lower_third_name": "JORDAN LEE",
+  "lower_third_role": "BUSINESS MENTOR",
+  "avatar_image": "demo/avatar.png",
+  "cta_text": "BOOK YOUR FREE CALL",
+  "comment_keyword": "PLAN",
+  "disclaimer_line": "Illustrative only. Not financial advice.",
+  "grade_lut": null
+}

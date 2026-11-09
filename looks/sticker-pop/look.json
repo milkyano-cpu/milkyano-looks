@@ -1,0 +1,108 @@
+{
+  "name": "Sticker Pop",
+  "slug": "sticker-pop",
+  "output": {"type": "talking-head / vlog / skit short with speech", "aspect": "9:16", "size": [1080, 1920], "fps": "follow source", "length_s": [15, 60], "variations_s": {"V1": 45, "V2": 30, "V3": 60, "V4": [15, 20]}, "deliver": ["mp4", "premiere xml", "per-event qtrle/prores4444 alpha clips", "clean dialogue wav", "sfx stem"]},
+  "type": {
+    "caption": {"font": "Inter Bold", "px": 64, "fill_role": "caption_fill", "outline_px": 10, "outline_role": "ink", "shadow": {"kind": "soft", "dy": 5, "blur": 7, "alpha": 0.45}},
+    "inline_keyword": {"font": "Lilita One", "scale_of_caption": 1.12, "fill_role": "highlight_fill", "outline_px": 11, "hard_shadow_px": 6},
+    "highlight_line": {"font": "Lilita One", "px": 100, "fill_role": "highlight_fill", "outline_px": 15, "hard_shadow_px": 9, "rot_deg": [-4, 0]},
+    "hook_title": {"font": "Lilita One", "px": 122, "line1_role": "caption_fill", "line2_role": "highlight_fill", "outline_px": 17, "hard_shadow_px": 10, "line_gap_px": -14, "rot_deg": [-5, -2], "case": "upper", "lines": 2},
+    "pill": {"font": "Lilita One", "px": 70, "text_role": "ink", "fill_role": "highlight_fill", "border_px": 7, "hard_shadow_px": 9, "padding_px": [40, 16], "radius": "height/2", "rot_deg": [6, 0]},
+    "item_pill": {"badge_px": 92, "badge_h_px": 132, "badge_radius_px": 30, "badge_inner_line_px": 6, "text_px": 70, "pill_h_px": 104, "border_px": 7, "hard_shadow_px": 10, "rot_deg": -2.5, "max_w_px": 900},
+    "stamp": {"font": "Lilita One", "px": [112, 128], "fill_roles": ["highlight_fill", "caption_fill"], "outline_px": [16, 17], "hard_shadow_px": 10, "tilt_deg": -4},
+    "price": {"old_px": 92, "old_outline_px": 14, "strike_px": 11, "strike_on_ink_px": 20, "new_px": 150, "new_outline_px": 18, "new_hard_shadow_px": 11, "gap_px": 30, "rot_deg": [-10, -4]},
+    "joke_note": {"font": "Inter Bold", "px": [46, 52], "outline_px": [7, 8], "shadow": {"dy": 4, "blur": 6, "alpha": [0.45, 0.5]}, "rot_deg": [-8, -4], "max_w_px": [700, 760], "prefix": "*"},
+    "script": {"font": "Great Vibes", "max_per_video": 2},
+    "question_sticker": {"font": "SF Pro Text Regular, fallback Segoe UI", "question_px": 46, "reply_px": 37, "emoji_px": 50},
+    "draw_order": "shadow, then all outlines, then all fills"
+  },
+  "colour_roles": {
+    "highlight_fill": "#FFD43B",
+    "ink": "#111111",
+    "caption_fill": "#FFFFFF",
+    "price_strike": "#E23B3B",
+    "end_card_bg": "#FFD43B",
+    "sticker_card": "#FFFFFF",
+    "sticker_text": "#121212",
+    "sticker_meta": "#8E8E8E",
+    "polaroid_card": "#FAFAF7"
+  },
+  "motion": {
+    "fps_note": "frame counts at 30 fps",
+    "eases": {"pop": "back-out s=2.0 (peak ~1.10)", "settle": "expo-out", "caption": "power3-out", "exit": "power2-in", "zoom": "cubic ease-out 1-(1-u)^3", "remotion": "Easing.bezier(0.16, 1, 0.3, 1)"},
+    "pop_in": {"length_s": "min(0.42, max(0.22, event/2))", "frames": [7, 13], "scale": [0.25, 1.0], "fade_in_s": 0.06, "drift_up_px": 26, "hold_grow": [1.0, 1.04]},
+    "exit": {"pop_out_s": 0.18, "fade_s": 0.10, "hard_cut_if_next_within_s": 0.02, "pop_out_min_event_s": 0.6},
+    "caption_in": {"fresh": {"scale": [0.94, 1.0], "s": 0.30, "rise_px": 10, "fade_s": 0.10}, "back_to_back": {"scale": [0.965, 1.0], "s": 0.22}},
+    "zoom": {"type": "scale only", "range": [1.0, 1.15], "ceiling": 1.2, "vertical": "frame centre", "horizontal_slide_max_px": 70, "hook": [1.0, 1.08], "long_shot_s": 2.2, "punchline": 1.15, "compilation_hook": [1.0, 1.06]},
+    "meme_push": {"range": [1.0, 1.2], "s": 1.7},
+    "graphic_lead_s": 0.10,
+    "motion_blur": {"shutter_deg": 180, "samples": 10, "max_first_frame_travel_px": 150},
+    "broll_entry": "flat, no settle zoom"
+  },
+  "captions": {
+    "source": "user SRT, line for line",
+    "lines": 1, "words": [1, 4], "max_chars": 20, "line_s": [0.25, 1.0],
+    "case": "lowercase except I and names; no full stops or commas; keep ?",
+    "position": [540, 1180], "ink_y": [1147, 1196], "lane_px": 690, "fit": "shrink, never wrap, never shift",
+    "karaoke_role": "highlight_fill",
+    "magnetic_to_cuts": true,
+    "replaced_by": ["highlight_line", "stamp", "hook_title", "url_pill"],
+    "one_word_variant": {"pop_scale_pct": [72, 82, 80], "pop_s": 0.2, "px": 45, "stroke_px": 6, "y": 1373}
+  },
+  "elements": {
+    "emoji_sticker": {"px": [150, 210], "default_px": 190, "white_edge_px": 6, "shadow": {"blur": 7, "alpha": 0.45, "dy": 6}, "rot_deg": {"start": [10, 14], "rest": [6, 8]}, "hold_s": [0.5, 1.4], "spots": [[250, 600], [830, 600], [250, 760], [830, 760], [540, 560], [200, 1000], [880, 1000], [540, 1460]], "closeup_spots": [[850, 1420], [230, 1420]]},
+    "emoji_per_beat": {"pos": [529, 1225], "scale_pct": 164, "large_art_scale_pct": [78, 104], "cadence_s": 2.0, "dur_s": [0.8, 3.53], "typical_s": [1.2, 3.0], "change_on": "cut or word edge", "gaps": "none", "prefer": "gif", "reuse_min_gap_s": 6, "section_header": "leave empty"},
+    "joke_note": {"y_min": 278, "no_face_y": 1060, "dur_s": [1.2, 2.25]},
+    "number_pills": {"pos": [540, 330], "fallback_y": 350, "hold": "until next number"},
+    "hook_title": {"pos": [540, 470], "fallback_y": [400, 560, 1420], "until": "first cut in 2.3-3.4 s, else 2.8 s"},
+    "question_sticker": {"radius_px": 42, "avatar_px": 80, "pad": {"l": 40, "r": 44, "t": 40, "b": 40}, "avatar_gap_px": 32, "line_px": 62, "max_text_px": 620, "shadow": {"alpha": 0.18, "blur": 14, "dy": 6}, "top_px": 160, "centred": true},
+    "green_screen_meme": {"key": "clip((G - max(R,B) - 25) / 40, 0, 1)", "despill": "G = min(G, max(R,B))", "anchor": "bottom centre", "width_px": [700, 1050], "in_frames": [5, 6], "travel_px": 300, "label_px": 46, "label_gap_px": 70, "card_variant": {"w_pct": 43, "y_pct": [48, 67.5], "dur_s": [1.3, 1.9]}},
+    "flash_polaroid": {"flash_peak": 0.92, "flash_decay_s": 0.45, "polaroid_w_px": 330, "border_px": 16, "bottom_px": 64, "rot_deg": [-18, -7], "hold_s": [0.12, 2.3]},
+    "face_censor": {"detect_score": 0.55, "bridge_s": 2.0, "hold_past_s": 0.5, "smooth_frames": 9, "sticker_x_face_h": 2.1},
+    "safe_box": {"x": [55, 1022], "y": [238, 1636], "below_y955_max_x": 910, "sprite_max_w": 800, "pill_max_w": 900, "title_max_w": 820}
+  },
+  "sound": {
+    "roles_db": {"popup": -15, "pill_whip": -6, "pill_pop": -1, "whoosh": -12, "vine_boom": -18, "bamboo": -14, "cash": -16, "shutter": -9, "positive": -6, "rizz": -16, "comedy": -16, "crickets": -18, "ding": [-14, -10]},
+    "pop_cue_offset_s": 0.10, "fade_in_ms": 4, "fade_out_ms": 30, "min_pop_gap_s": 0.12, "max_simultaneous": 2,
+    "dialogue_lufs": -16, "music_lufs": [-33, -31], "music_fade_in_s": 0.25, "music_fade_out_s": 1.2,
+    "master_lufs": -14, "true_peak_dbtp": -1, "codec": "AAC 48 kHz 256k",
+    "censor": {"tone_hz": 1000, "under_speech_db": 8, "ramp_ms": 12},
+    "joins": "constant power; 8 ms ramps on dialogue edges; 50 ms afade at variation joins"
+  },
+  "pacing": {
+    "jump_cut": "every phrase boundary", "gap_removed_median_s": [0.4, 0.8],
+    "handles_ms": {"head": [0, 140], "tail": [90, 210], "skit": 0},
+    "broll_coverage_pct": [30, 55], "broll_min_s": 0.6, "close_gaps_under_s": 0.35, "last_broll_before_end_s": 2.2,
+    "graphic_every_s": [1, 2],
+    "variations": "each opens on a visibly different beat"
+  },
+  "bans": [
+    "glossy or gradient pills", "white-outlined pill text", "soft shadow instead of hard ink shadow",
+    "two-line captions", "captions over 20 characters", "captions off the fixed spot",
+    "same text twice", "graphics over a face", "zoom aimed at the waist", "zoom over 115 %", "linear zoom",
+    "per-frame face following", "SFX with nothing popping", "shutter with no flash",
+    "one-frame A-roll flash", "settle zoom on b-roll", "mosaic on bystanders",
+    "outline drawn over fill", "bare #1 pill with no item text", "same meme twice in a batch"
+  ],
+  "skin_slots": {
+    "font_display": "fat rounded display font: highlights, titles, pills, stamps, price",
+    "font_caption": "bold grotesk: captions and joke notes",
+    "font_script": "script partner font, one or two uses a video",
+    "font_sticker": "UI sans file for the IG question sticker",
+    "highlight_fill": "hex: highlight words, title line 2, pills, stamps, karaoke word",
+    "ink": "hex: outlines, hard shadows, pill borders",
+    "caption_fill": "hex: captions, title line 1",
+    "end_card_bg": "hex: end screen background",
+    "colour_words": "map of spoken colour words to fill hex",
+    "keywords": "words that switch to the display font inside captions",
+    "logo": "logo file for the end card",
+    "url_text": "text of the URL pill",
+    "cta_lines": "approved closing lines",
+    "copy_bans": "words never used in copy we write",
+    "emoji_library": "path to the emoji / GIF set",
+    "avatar_dir": "folder of random avatar images for the question sticker",
+    "emoji_cache_dir": "folder for downloaded emoji PNGs",
+    "music_bed": "music source or folder",
+    "sfx_kit": "folder or lookup for the SFX roles"
+  }
+}

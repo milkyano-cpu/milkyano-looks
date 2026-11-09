@@ -1,0 +1,54 @@
+{
+  "name": "Native UGC",
+  "slug": "native-ugc",
+  "output": {"type": "6 s caption-led B-roll ad", "aspect": "9:16", "w": 1080, "h": 1920, "fps": 30, "frames": 180, "length_s": [6, 6], "deliver": ["mp4"], "codec": "h264 crf 16 yuv420p", "naming": "<angle> - <one-line concept>.mp4", "batch": [4, 10]},
+  "type": {
+    "caption": {"font": "Inter Bold", "px": 50, "case": "sentence case as typed, POV in capitals", "chars_per_line": [20, 34], "lines": 3, "no_dashes": true}
+  },
+  "colour_roles": {
+    "caption_text": "#000000",
+    "caption_box": "#FFFFFF",
+    "box_opacity": 1.0,
+    "footage": "natural phone colour, no LUT, no vignette"
+  },
+  "motion": {
+    "captions": "static, all lines from frame 0 to 179",
+    "zoom": "none",
+    "speed_ramp": "none",
+    "footage": "one continuous phone shot"
+  },
+  "captions": {
+    "one_box_per_line": true,
+    "box": {"radius_px": 16, "pad_x_px": 24, "pad_y_px": 14, "gap_px": 10, "max_w_px": 900},
+    "x": 540,
+    "band_y": [320, 1600],
+    "safe_box": [55, 238, 1022, 1636],
+    "below_y955_max_x": 910,
+    "never_over_product": true,
+    "voice": "first person buyer, casual, I used to / now I",
+    "product_name_in_caption": false,
+    "claims": "I statements about what happened are fine; promises to the viewer are not; flag medical wording [MEDICAL CLAIM]",
+    "alt_style_shadow": {"note": "plain white text with a soft shadow, no box", "font_px": 46, "shadow": {"blur": 6, "alpha": 0.59, "offset_px": 2}, "wrap_chars": 34, "line_gap_px": 14, "pad_px": 24}
+  },
+  "sound": {"default": "silent; music added in-app at upload", "if_needed": {"lufs": -14, "sfx": false, "voiceover": false}},
+  "pacing": {
+    "single_clip": {"cuts": 0, "window_s": 6},
+    "multi_clip": {"segments_s": [[3, 3], [2, 2, 2]], "cuts": "hard"},
+    "source_clip_s": [10, 15],
+    "coverage": ["product close-up", "hands", "one wide"],
+    "show_in_use": true
+  },
+  "variations": {"change_together": ["angle", "copy", "clip"], "cycle_unused_angles_first": true, "reference_transplant": "copy box style, text placement, cut rhythm and copy length from any reference ad"},
+  "bans": ["one block behind all lines", "captions over the product", "captions in the top or bottom sixth", "animated or stroked text", "dashes", "invented stats, research or experts", "fixes / treats / cures promises", "product name in a caption", "reskin-only variations"],
+  "skin_slots": {
+    "font_caption": "caption font name or file",
+    "caption_text": "caption text colour",
+    "caption_box": "caption box colour",
+    "product_noun": "how captions refer to the product",
+    "banned_words": "words never used in copy",
+    "locked_lines": "fixed lines and where each is allowed",
+    "angle_bank": "angles with funnel stage and closing line",
+    "audience": "who buys, one sentence",
+    "claims_policy": "what counts as a claim and how to flag it"
+  }
+}

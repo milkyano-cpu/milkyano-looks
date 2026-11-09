@@ -1,0 +1,20 @@
+{
+  "skin": "Demo Cycles (neutral demo, not a real brand)",
+  "font_display": "Nunito Black",
+  "font_display_file": "fonts/Nunito-Black.ttf",
+  "highlight_positive": "#4FD1FF",
+  "highlight_negative": "#FF3B3B",
+  "highlight_price": "#39E75F",
+  "gradient_hero": ["#6EE7FF", "#3B6CFF"],
+  "gradient_4colour": {"tl": "#FFE600", "tr": "#2BFF6A", "br": "#2F7BFF", "bl": "#FF2BD6"},
+  "gradient_metal": ["#FFF4C8", "#FFDD6E", "#FFC03A", "#F28A1E"],
+  "saber_colour": "#FF1E1E",
+  "glow_exposure": 0.268,
+  "safe_box": [55, 238, 1022, 1636],
+  "face_model": "models/face_detection_yunet_2023mar.onnx",
+  "outro_file": {"path": "assets/demo_endcard.mp4", "frames": 317},
+  "logo_files": {"demo": "assets/demo_logo_white.png"},
+  "music_bed": {"path": "assets/demo_bed.mp3", "gain_db": -24, "in_s": 0.0},
+  "sfx_files": {"pop": "sfx/pop.wav", "cash": "sfx/cash_register.wav", "error": "sfx/error.wav", "whoosh": "sfx/whoosh.wav", "saber": "sfx/saber_whoosh.wav", "shutter": "sfx/shutter.wav"},
+  "spelling": {"democycles": "Demo Cycles"}
+}

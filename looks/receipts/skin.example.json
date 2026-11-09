@@ -1,0 +1,23 @@
+{
+  "_note": "Neutral demo skin for Receipts. No real brand.",
+  "font_caption": "C:/Windows/Fonts/Montserrat-ExtraBold.ttf",
+  "font_headline": "C:/Windows/Fonts/Montserrat-ExtraBoldItalic.ttf",
+  "font_slam": "C:/Windows/Fonts/Montserrat-BlackItalic.ttf",
+  "font_label": "C:/Windows/Fonts/Montserrat-Bold.ttf",
+  "spoken_word": "#7AFDF8",
+  "problem_red": "#FF1E2D",
+  "stars": "#FFC531",
+  "icon_lit": "#2F8CFF",
+  "proof_screenshot": {"file": "assets/demo_reviews.png", "crop": [30, 75, 596, 830]},
+  "proof_ring_box": {"centre": [554, 1050], "size": [599, 152]},
+  "review_count_spoken": "120+",
+  "locality": "RIVERSIDE'S",
+  "services": ["PAINT CORRECTION", "INTERIOR DETAIL"],
+  "product_popups": {"5 YEAR": "assets/demo_product_5yr.png"},
+  "count_icon": "assets/icon_car.png",
+  "logo": "assets/demo_logo.png",
+  "cta_button_text": "LEARN MORE",
+  "caption_units": ["PAINT CORRECTION", "INTERIOR DETAIL", "FAMILY SUV"],
+  "sfx_kit": "assets/sfx",
+  "meme_pack": {"source": "assets/green_screen_memes.mp4", "ledger": "batch/meme_ledger.txt"}
+}

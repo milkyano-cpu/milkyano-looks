@@ -1,0 +1,81 @@
+{
+  "name": "Cinematic Captions",
+  "slug": "cinematic-captions",
+  "output": {"type": "captions on an untouched talking-head clip", "aspect": "follow source", "fps": "follow source", "length_s": [3, 600], "deliver": ["mp4"]},
+  "type": {
+    "font_body": "Sora",
+    "font_hero": "Sora",
+    "rail": {"size_of_frame_h": 0.045, "px_1920_tall": 86, "anchor_font_px": 46, "weight": [500, 600], "tracking": "0.012em", "max_lines": 2, "chars_per_line": [32, 42]},
+    "hero": {"size_of_frame_h": [0.16, 0.22], "default_of_frame_h": [0.18, 0.2], "px_1920_tall": [307, 422], "anchor_font_px": 150, "weight": [800, 900], "min_ratio_to_body_emphasis": 1.8, "min_ratio_to_smallest": 2.5},
+    "embed_body_tiers_of_frame_h": {"narration": 0.055, "emphasis": [0.085, 0.1], "crown": 0.2},
+    "never_animate": ["letter-spacing", "filter blur on word entrance"]
+  },
+  "colour_roles": {
+    "rail_text": "#F2EFE9",
+    "accent": "#D9B98C",
+    "emphasis": "#EFCB9A",
+    "hero_text": "#FFF5DF",
+    "scrim": "rgba(0,0,0,0.35)",
+    "accent_fallback_scene_sampled": "#E3C06A",
+    "luma_rules": {"under_60": "light text as-is", "60_180": "add glyph scrim", "over_180": "opaque text + scrim, no screen blend"}
+  },
+  "motion": {
+    "rail": {"in_ms": [150, 250], "out_ms": [150, 250], "move": "fade-up", "emphasis_pop_max": 1.1},
+    "word_fade_up": {"stagger_ms": 80, "y_px": 8, "dur_s": 0.45, "ease": "power2.out"},
+    "presets": {
+      "soft": {"y": 8, "blur": 2.5, "dur": 0.5, "ease": "power2.out"},
+      "present": {"y": 6, "scale": 1.03, "dur": 0.3, "ease": "power3.out"},
+      "impact": {"y": 12, "scale": 1.08, "dur": 0.24, "ease": "power4.out"},
+      "exit": {"y": -8, "dur": 0.45, "ease": "sine.in"}
+    },
+    "hero_three_act": {"dim_others": [0.45, 0.55], "letter_stagger_s": 0.016, "amplitude": "follows speech loudness", "breathe": [1.0, 1.012], "glow": 0.3},
+    "anchor_hero": {"setpiece": "settle", "layer": "behind subject", "underline": "drawn accent line"},
+    "rail_yield": {"dim": 0.55, "pre_s": 0.2, "post_s": 0.9},
+    "plate": {"dim": 0.16, "push_in": 0.012, "grain": 5, "themed_only": true},
+    "exit_rule": "entrance reversed at 60% duration, only in a speech gap",
+    "deterministic": true
+  },
+  "captions": {
+    "classes": {"drop": "filler, not shown", "rail": "verbatim, in front", "embed": "peak word behind the subject"},
+    "rail_y_9x16": {"from_bottom_px": [600, 700], "baseline_y_1920": [1220, 1320], "anchor_bottom_px": 96, "title_safe": 0.8},
+    "rail_groups_on_screen": 1,
+    "hero_per_thought_max": 1,
+    "hero_air_s": 0.6,
+    "apex_per_clip": 1,
+    "hero_occluded_pct": [30, 55],
+    "face_clear_min_pct": 30,
+    "face_check_window_s": 0.3,
+    "min_on_screen_s": 0.5,
+    "timing_tolerance_ms": 80,
+    "rail_min_gap_s": 1.5
+  },
+  "identities": {
+    "default": "anchor",
+    "classic": ["cream", "ink", "editorial", "keynote", "documentary", "loud", "neon", "glitch", "chrome", "velocity"],
+    "themed": ["anchor", "ordnance", "terminal", "neonsign", "stardust", "stomp", "lastpage", "scoreboard", "transit", "vhs", "arcade", "dossier", "laser", "thunder", "hologram", "biolume", "aurora", "spectrum", "papercut", "popup", "chalkboard", "graffiti", "brush", "inkwater", "ransom"],
+    "pick": {"must_read": ["anchor", "ordnance", "terminal"], "bright_scene": "ink", "warm_dark": "cream", "fashion": "editorial", "product": "keynote", "interview": "documentary", "vfx_word": "ordnance", "vfx_frame": "stomp", "vfx_decode": "terminal", "vfx_every_beat": "loud", "unsure": "anchor"}
+  },
+  "sound": {"added": false, "source_audio": "untouched"},
+  "pacing": {"cuts": "none, single shot", "heroes": {"short_clip": [1, 2], "long_explainer": "about one per section"}},
+  "bans": [
+    "embedding every word",
+    "grading, recolouring or texturing the footage (plate reaction of themed identities excepted)",
+    "two heroes on screen together",
+    "two caption groups overlapping in time and screen space",
+    "screen-blend light text on scenes over luma 180",
+    "multi-speaker, hard-cut, faceless, speechless or already-captioned clips",
+    "Math.random, Date.now, infinite repeats"
+  ],
+  "skin_slots": {
+    "identity": "which of the 35 identities",
+    "font_body": "rail / body font, free fonts only",
+    "font_hero": "hero word font",
+    "rail_text": "rail text colour",
+    "accent": "hero accent and underline colour",
+    "emphasis": "inline emphasis colour on the rail",
+    "scrim": "text-box scrim colour and alpha",
+    "rail_bottom_px": "rail distance from the bottom edge",
+    "hero_case": "hero case: upper, lower or as spoken",
+    "language": "transcript language for WhisperX"
+  }
+}

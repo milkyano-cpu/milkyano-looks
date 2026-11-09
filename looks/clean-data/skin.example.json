@@ -1,0 +1,10 @@
+{
+  "skin": "Demo Analytics (neutral demo, not a real brand)",
+  "font_ui": "Inter",
+  "font_number": "Inter Tight 700",
+  "font_mono": "JetBrains Mono",
+  "mode": "dark",
+  "accent": "#2F7CF6",
+  "pin": "#F0483E",
+  "place_names": ["Old Town", "North Park", "Market", "East Gardens", "River"]
+}

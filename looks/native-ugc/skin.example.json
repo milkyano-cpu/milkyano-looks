@@ -1,0 +1,19 @@
+{
+  "skin": "Demo Bottle Co (neutral demo, not a real brand)",
+  "font_caption": "Inter Bold",
+  "caption_text": "#000000",
+  "caption_box": "#FFFFFF",
+  "product_noun": "this bottle",
+  "banned_words": ["miracle", "detox", "cure"],
+  "locked_lines": {
+    "tagline": {"text": "Cold for the whole day.", "where": "last line of awareness ads"},
+    "hook": {"text": "One sip and you'll get it.", "where": "first-time reactions"}
+  },
+  "angle_bank": [
+    {"name": "Everyday Carry", "stage": "consideration", "closing": "tagline"},
+    {"name": "Before & After", "stage": "conversion", "closing": "hook"},
+    {"name": "Gifting", "stage": "conversion", "closing": "tagline"}
+  ],
+  "audience": "students and commuters who keep forgetting their drink in the car",
+  "claims_policy": "I statements only; no health promises; flag anything medical as [MEDICAL CLAIM]"
+}

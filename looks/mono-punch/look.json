@@ -1,0 +1,82 @@
+{
+  "name": "Mono Punch",
+  "slug": "mono-punch",
+  "output": {"type": "talking-head short", "aspect": "9:16", "canvas": [1080, 1920], "fps": "follow source (approved at 59.94)", "length_s": [42, 65], "cues_per_short": [27, 39], "screens_per_short": [1, 2], "deliver": ["mp4 (libx264 slow crf 16, yuv420p, bt709, AAC 320k cutoff 18k, faststart)", "phone review mp4 720x1280 crf 24"]},
+  "type": {
+    "family": "Montserrat",
+    "weights": [500, 600, 700, 800, 900],
+    "card_tracking_em": -0.045,
+    "card_case": "Title Case",
+    "fit": "measure with the real TTF and shrink to fit, never browser-wrap",
+    "caption": {"weight": 700, "px": 86, "max_w": 960, "centre_y": 1062, "slot_top": 1006, "slot_h": 112, "tracking_em": -0.02, "fill": "#FFFFFF", "stroke_px": 9, "stroke": "#000000", "shadow": "0 4px 16px rgba(0,0,0,.55)"},
+    "statement": {"weight": 800, "px": 132, "top": 1168, "tracking_em": -0.05, "line_height": 1.04},
+    "phone_ui": {"family": "SF Pro Display or Inter", "scale_vs_ios": 1.5}
+  },
+  "colour_roles": {
+    "ink": "#000000",
+    "paper": "#FFFFFF",
+    "accent": "#FFFFFF",
+    "accent_soft": "#FFFFFF",
+    "glass": {"hex": "#080808", "alpha": 0.9, "border": "accent at 0.55"},
+    "bed": {"downscale": 4, "gaussian_sigma": 7, "colour_mix": 0.55, "grey_mix": 0.45, "brightness": 0.46}
+  },
+  "motion": {
+    "springs": {"formula": "duration = 5 / (zeta * omega)", "bouncy": [0.42, 17], "snappy": [0.72, 20], "soft": [0.62, 16], "firm": [0.55, 22], "land": [0.34, 15]},
+    "spring_frames_at_59_94": {"bouncy": 42, "snappy": 21, "soft": 30, "firm": 25, "land": 59},
+    "entrances": {"chip_tab": "from scale .35, y +24, bouncy", "card": "from y +100, scale .9, firm", "row": "from x -90, firm", "slam": "from scale 1.22, y -34, bouncy", "safe_default": "fade + 40 px slide, or one scale-in", "rule": "one tween per property per element"},
+    "kick": {"scale": 1.07, "range": [1.05, 1.16], "up_s": 0.06, "up_ease": "power2.out", "back": "bouncy"},
+    "highlight_box": {"scaleX": [0, 1], "ease": "power3.out", "s": 0.26, "descender_extra_em": 0.11, "clip": "inset(-.4em ...)"},
+    "word_build": {"statement_from": "y +70, scale .7, bouncy", "generic_from": "y +46, scale .86, bouncy"},
+    "odometer": "digits roll to the value on its word; hidden until its row lights",
+    "fade_out": {"s": 0.2, "ease": "power2.in", "skip_if": "clip ends with the video or is shorter than 0.3 s"},
+    "motion_blur": {"shutter_frames": 0.5, "px_per_sample": 2.5, "samples": [1, 32], "averaging": "premultiplied"},
+    "picture": {
+      "anchor": "x = face centre, y = face top - 40 px",
+      "modes": {"W": 1.0, "M": 1.06, "T": 1.12, "P": [1.0, 1.08], "S": [1.0, 1.05], "K_hook": "1.16 cut -> 1.00 out over 0.62 s", "K_kick": "1.10 cut -> 1.06 out over 0.42 s", "BW": "black and white"},
+      "eases": {"cut": "step", "out": "1-(1-u)^3", "sine": "0.5-0.5cos(pi u)"},
+      "shake": {"default_px": 10, "default_s": 0.3, "envelope": "amp*exp(-u/(0.4d))*(1-u/d)", "x_hz": 13, "y_hz": 11, "y_amp": 0.8, "subframes": 3, "moves_overlay": true},
+      "flash": {"opacity": 0.85, "fade_s": 0.08, "sfx": "hit_med -3 dB"},
+      "bed_under_screens": {"push": [1.0, 1.04], "ease": "sine", "cross_in_s": 0.12, "cross_out_s": 0.22, "take_xfade_s": 0.15, "rule": "one continuous take, no per-cut zoom"}
+    }
+  },
+  "captions": {"words": [1, 2], "keep_run_max": 3, "max_chars": 20, "never_cross_cut": true, "break_after_punctuation": true, "no_weak_word_end": true, "merge_under_s": 0.25, "accent_words": "a few per short", "timing": "forced alignment of a corrected script, starts pulled to the audio onset"},
+  "layout": {
+    "slam": {"top": 250, "tab_top": 194},
+    "title_card": {"top": 256, "h": 90, "max_w": 800, "highlight_words": 1},
+    "tab": {"top": 280, "h": 92, "type_px": 50},
+    "chip": {"top": 284, "h": 96, "type_px": 50},
+    "chips2": {"dark_top": 256, "dark_h": 90, "dark_type_px": 46, "accent_top": 366, "max_chars_total": 26},
+    "headroom": {"gap_above_hair_px": 44, "safe_line_y": 238},
+    "lower_band": {"top": [1176, 1196], "h": 430},
+    "screens": {"heads_y": [232, 336], "phone_scale": 1.24, "notif_title_max_chars": 22},
+    "cta": {"comment_box_top": 1232, "arrow_y": 1404}
+  },
+  "sound": {
+    "bed": {"genre": "rap / trap instrumental on its bar grid", "under_voice_db": 17, "automation": ["redrop", "continue", "mute", "duck", "lowpass 800-900 Hz under screens", "tapestop"]},
+    "sfx": {"variants_per_pool": [2, 4], "rotate": true, "pitch_jitter_semitones": 0.6, "normalise": "peak -1 dBFS + pool gain", "trim_db": -3, "dense_bed_deltas_db": {"whoosh_small": 6, "tick": 4, "notif": 3, "send": 3, "click": 3, "typing": 2, "pop": 2, "whoosh_screen": 2}, "speaker_offset": "if dialogue is 3+ dB off -20 LUFS, all pools move by (dialogue + 20) dB", "flags": {"buried_db": -8, "loud_db": 4, "window_ms": 300}},
+    "pools": {"slam": "hit_med + sub", "chip_tab_highlight": "pop", "card_in": "whoosh_small", "screen_in": "whoosh_screen", "title_statement": "swish", "odometer_meter": "tick", "checklist_rows": "click", "notification": "notif", "cta": "typing + send", "stamp": "thud + paper", "strike": "marker", "big_shake": "boom_big + sub"},
+    "master": {"lufs": -14.0, "true_peak_dbtp": -1.0, "sample_ceiling_dbfs": -3.0}
+  },
+  "pacing": {"graphic_every_beat": true, "max_hold_s": 5, "hook": "frame-0 slam + tab, hit + sub + pop on frame 0, held to end of the opening sentence; zoom kick on the stat word", "tail_ring_out_frames": [10, 20], "cta": "comment box on 'comment', types keyword, sends on next word, arrow bounce, holds to last frame"},
+  "bans": [
+    "hard-cutting a graphic away (fade the last 0.2 s)",
+    "two tweens on one property",
+    "zoom, punch or jump cut on the blurred bed under a screen",
+    "graphics on the face",
+    "a top graphic floating in dead sky above the head",
+    "a highlight box that cuts a descender",
+    "a second accent colour or glow",
+    "numbers visible before their row lights",
+    "synthetic template SFX packs",
+    "compositing in gbrp (blacks the right 8 px on some ffmpeg builds)"
+  ],
+  "skin_slots": {
+    "accent": "the one accent hex: highlight boxes, chips, tabs, strike, accent caption words, send flash, CTA arrow",
+    "accent_rgb": "the accent as 'r,g,b' for rgba() uses (glass border at .55, chip glows)",
+    "accent_soft": "lit-column tint on kanban screens",
+    "send_button_on_send": "send button colour on send; black when the accent is white",
+    "logo_file": "optional light lockup on the black CTA pill; null strips the pill",
+    "logo_width_px": "lockup width on the pill",
+    "cta_keyword": "the word the comment box types"
+  }
+}

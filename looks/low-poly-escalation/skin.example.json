@@ -1,0 +1,24 @@
+{
+  "about": "Neutral demo skin: white HUD, amber accent, no mark. No real brand.",
+  "font_family": "Inter",
+  "font_file": "fonts/inter-latin-700-normal.woff2",
+  "font_weight": 700,
+  "hud_text": "#FFFFFF",
+  "accent": "#FFB020",
+  "alert": "#FF1A1A",
+  "go": "#3CFF00",
+  "logo": null,
+  "subject_logo": false,
+  "subject_primary": "#16181C",
+  "subject_accent": "#FFB020",
+  "subject_props": "#FFB020",
+  "cta_lines": ["we can't triple your speed", "but we can get you moving", "your shop, your town"],
+  "music": {"file": null, "bpm": 150},
+  "outro": null,
+  "engine_brand": {
+    "font": {"family": "Inter", "file": "fonts/inter-latin-700-normal.woff2", "weight": 700},
+    "colors": {"text": "#FFFFFF", "accent": "#FFB020", "red": "#FF1A1A", "green": "#3CFF00"},
+    "logo": null,
+    "rider": {"jersey": "#16181C", "accent": "#FFB020", "bottle": "#FFB020"}
+  }
+}

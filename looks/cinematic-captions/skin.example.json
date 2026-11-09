@@ -1,0 +1,13 @@
+{
+  "about": "Neutral demo skin for the anchor identity on a vertical clip. No real brand.",
+  "identity": "anchor",
+  "font_body": "Sora",
+  "font_hero": "Sora",
+  "rail_text": "#F2EFE9",
+  "accent": "#9CC7E8",
+  "emphasis": "#BFDDF2",
+  "scrim": "rgba(0,0,0,0.35)",
+  "rail_bottom_px": 640,
+  "hero_case": "upper",
+  "language": "en"
+}

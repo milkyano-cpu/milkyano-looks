@@ -1,0 +1,22 @@
+{
+  "_note": "Neutral demo skin for Sticker Pop. No real brand.",
+  "font_display": "C:/Windows/Fonts/LilitaOne-Regular.ttf",
+  "font_caption": "C:/Windows/Fonts/Inter-Bold.ttf",
+  "font_script": "C:/Windows/Fonts/GreatVibes-Regular.ttf",
+  "font_sticker": "C:/Windows/Fonts/segoeui.ttf",
+  "highlight_fill": "#FFD43B",
+  "ink": "#111111",
+  "caption_fill": "#FFFFFF",
+  "end_card_bg": "#FFD43B",
+  "colour_words": {"gold": "#E8B455", "black": "#1C1C1C"},
+  "keywords": ["free", "never", "everyone", "guaranteed"],
+  "logo": "assets/demo_logo.png",
+  "url_text": "example.com",
+  "cta_lines": ["link below", "try it tonight"],
+  "copy_bans": ["miracle", "cure"],
+  "emoji_library": "assets/emoji",
+  "avatar_dir": "assets/avatars",
+  "emoji_cache_dir": "assets/emoji_cache",
+  "music_bed": "assets/music/light_comedy_bed.wav",
+  "sfx_kit": "assets/sfx"
+}

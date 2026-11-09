@@ -1,0 +1,19 @@
+{
+  "_note": "Neutral demo skin for Cream Stop-Motion. No real brand or characters.",
+  "characters": [
+    {"name": "Character A", "ref": "assets/char_a.png", "anchor": "the character from image 1: same round orange clay-like 3D body, big eyes, green scarf, same proportions", "voice_id": "VOICE_A", "personality": "eager, over-excited", "speaks": "bright and fast", "backdrop": "plain flat mid-grey studio background", "prefix": "a_"},
+    {"name": "Character B", "ref": "assets/char_b.png", "anchor": "the character from image 1: same tall blue clay-like 3D body, sleepy eyes, striped shirt, same proportions", "voice_id": "VOICE_B", "personality": "deadpan, unimpressed", "speaks": "low, flat, slow", "backdrop": "plain flat mid-grey studio background", "prefix": "b_"}
+  ],
+  "hero_prop": {"words": "a big round cushion as tall as its body", "ref": "assets/prop.png"},
+  "set_bg": "#FCF4DB",
+  "caption_ink": "#816B4C",
+  "handle_ink": "#282828",
+  "mark_tick": "#F6C440",
+  "mark_heart": "#F4728A",
+  "font_caption": "C:/Windows/Fonts/arialbd.ttf",
+  "handle_text": "@demo.account",
+  "tts_model": "any multi-voice TTS",
+  "sfx_kit": "assets/sfx",
+  "banned_words": ["damn", "hell", "crap"],
+  "post_caption_style": ["tag the friend who does this every morning"]
+}

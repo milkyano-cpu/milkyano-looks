@@ -1,0 +1,10 @@
+{
+  "name": "Demo Mono",
+  "accent": "#FFFFFF",
+  "accent_rgb": "255,255,255",
+  "accent_soft": "#FFFFFF",
+  "send_button_on_send": "#000000",
+  "logo_file": null,
+  "logo_width_px": 0,
+  "cta_keyword": "AUDIT"
+}

@@ -1,0 +1,103 @@
+{
+  "name": "Low-Poly Escalation",
+  "slug": "low-poly-escalation",
+  "output": {"type": "code-rendered 3D escalation reel", "aspect": "9:16", "size": [1080, 1920], "fps": 30, "length_s": [15, 45], "deliver": ["mp4", "contact sheet", "qc + sound report"]},
+  "type": {
+    "family": "Inter",
+    "weight": 700,
+    "small_line": {"px": 64, "baseline_y": 372},
+    "number": {"px": 206, "unit_px": 100, "baseline_y": 586},
+    "caption": {"px": 64, "baseline_y": 668, "max_width_px": 900, "case": "lowercase except proper nouns", "max_chars": 35, "full_stops": false},
+    "hook": {"lines_px": [96, 150, 96], "top_y": 300, "gap_em": 0.08, "big_line": "accent"},
+    "cta": {"line1": {"px": 66, "y": 560}, "line2": {"px": 150, "y": 700, "colour": "accent"}, "mark": {"w": 330, "y": 800}, "line3": {"px": 48, "y": 1000, "y_no_mark": 830}},
+    "glow": {"blurs_px": [46, 16], "blend": "lighter"},
+    "shadow": {"alpha": 0.8, "blur_px": 20, "offset_y_px": 7},
+    "v1_hud": {"label": {"family": "Inter", "weight": 600, "px": 29, "tracking": "0.15em", "case": "upper"}, "number": {"family": "serif (Lora)", "weight": 500, "px": 124}, "caption": {"family": "serif italic (Lora)", "px": 64, "line_height_px": 70}, "late_number_colour": "#F7ECA6", "rule_pill": "#E0263C"}
+  },
+  "colour_roles": {
+    "hud_text": "#FFFFFF",
+    "accent": "#00DEFF",
+    "alert": "#FF1A1A",
+    "go": "#3CFF00",
+    "subject_primary": "#0D0F12",
+    "subject_accent": "#00DEFF"
+  },
+  "world": {
+    "sun": {"elevation_deg": 16, "azimuth_deg": 46, "key": 6.5, "hemi_fill": 0.6, "ibl": 0.85},
+    "fog": {"type": "FogExp2", "density": 0.00028, "tint": "peach"},
+    "grade": {"tone_map": "ACES", "contrast": 1.06, "saturation": 1.12, "vignette": 0.3, "grain": 0.02, "chromatic_aberration": {"default": 0.0012, "fire": 0.002, "plasma": 0.0024}, "shadow_lift": [0.022, 0.018, 0.014]},
+    "bloom": {"strength": 0.28, "radius": 0.55, "threshold": 1.7},
+    "gtao_mix": 0.55,
+    "chunk_period_divides_m": 480,
+    "portrait_half_fov_deg": [12, 13]
+  },
+  "motion": {
+    "fps": 30,
+    "deterministic": "pure function of t, seeded Math.random, no clocks",
+    "motion_blur": {"subframes": [10, 24], "shutter_frames": 0.5, "crosses_cuts": false, "hud_blurred": true, "jitter": "Halton(2,3)"},
+    "speed_ease_up_s": 0.32,
+    "speed_drop": "instant",
+    "hook": "on from frame 0, spring settle, exits upward into beat 1",
+    "cut": "hard cut + new camera + new number + stomp every beat",
+    "draft": {"fps": 15, "subframes": 2},
+    "on_screen_speed_mps": {"real_up_to": 200, "static_boom_cam": 150, "chase": [700, 1400]}
+  },
+  "captions": {
+    "position": "HUD stack top of frame",
+    "per_beat": 1,
+    "claims_per_caption": 1,
+    "highlight_runs": 1,
+    "highlight_colours": ["accent", "alert", "go", "white"],
+    "caption2_at": "half the beat",
+    "subject_keep_out_y": [250, 760]
+  },
+  "sound": {
+    "every_sfx_on_visible_change": true,
+    "per_cut": ["whoosh", "number pop", "caption swipe", "escalating stomp or hit"],
+    "drop": "sub on the music drop and big set pieces",
+    "riser_to_hit": "equal-power fade ending on the hit frame",
+    "passby_ends_before_boom_ms": 15,
+    "music_db": -12,
+    "duck_db": -7,
+    "master": {"lufs": -15.5, "true_peak_dbtp": -1.5, "sample_ceiling_db": -1.9, "measure": "encoded mp4"},
+    "v1_master": {"lufs": -14, "true_peak_dbtp": -1.0}
+  },
+  "pacing": {
+    "grid": "whole music beats",
+    "segment_beats": 6,
+    "segment_s_at_138bpm": 2.6,
+    "min_beats": {"boom": 6, "orbit": 6},
+    "hook_beats": 6,
+    "cta_beats": 8,
+    "dip_s": [0.2, 0.5],
+    "examples": {"5 beats @150 BPM": "15 s", "12 beats @138 BPM": "40 s"},
+    "skip_steps": true
+  },
+  "bans": [
+    "caption claim without an assert against a sourced constant",
+    "loosening an assert to make a caption pass",
+    "car between the lens and the subject",
+    "subject inside the HUD block y 250-760",
+    "per-frame random draws or state leaking between frames",
+    "HyperFrames' own MP4 encode",
+    "moving a sound to fix sync",
+    "overwriting a delivered mp4"
+  ],
+  "skin_slots": {
+    "font_family": "HUD font family",
+    "font_file": "HUD font file copied into the project's fonts/",
+    "font_weight": "HUD font weight",
+    "hud_text": "number, small line and caption body colour",
+    "accent": "hook big line, CTA punch, default highlight run",
+    "alert": "highlight run for danger beats",
+    "go": "highlight run for win beats",
+    "logo": "white mark on the CTA, file path or null",
+    "subject_logo": "true to put the mark on the subject's garment",
+    "subject_primary": "subject's main garment colour",
+    "subject_accent": "subject's trim colour",
+    "subject_props": "prop colour (bottle, small parts)",
+    "cta_lines": "the 3 CTA lines: small, big punch, small",
+    "music": "optional music file with bpm and drop time",
+    "outro": "optional outro clip appended after the dip"
+  }
+}
